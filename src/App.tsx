@@ -1,12 +1,9 @@
 import React from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  return (
-    <div>
-      <h1 className='text-2xl bg-gray-200'>Hello</h1>
-    </div>
-  );
+  return <Routes></Routes>;
 }
 
 export default App;
