@@ -19,3 +19,7 @@ export type Response = {
 };
 
 export type Url = string;
+
+export type PropsText = {
+  children: string;
+};
