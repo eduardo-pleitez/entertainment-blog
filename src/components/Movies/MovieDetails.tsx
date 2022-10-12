@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from '../hooks/useFetch';
-import { BASE_URL } from '../assets/globalVariables';
-import LoadingMessage from '../components/Layout/LoadingMessage';
-import ErrorMessage from '../components/Layout/ErrorMessage';
+import useFetch from '../../hooks/useFetch';
+import { BASE_URL } from '../../assets/globalVariables';
+import LoadingMessage from '../Layout/LoadingMessage';
+import ErrorMessage from '../Layout/ErrorMessage';
 
 export default function MovieDetails() {
   const params = useParams();
