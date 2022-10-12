@@ -14,3 +14,8 @@ export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
   | { type: 'FETCH_ERROR' };
 
+export type Response = {
+  data: Data;
+};
+
+export type Url = string;
