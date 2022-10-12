@@ -4,6 +4,7 @@ import { BASE_URL } from '../../assets/globalVariables';
 import SectionTitle from '../Layout/SectionTitle';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
+import TvShowElement from './TvShowElement';
 
 export default function TvShowsList() {
   const [url, setUrl] = useState(`${BASE_URL}tv/popular?language=en-US`);
@@ -15,7 +16,7 @@ export default function TvShowsList() {
         {loading ? (
           <LoadingMessage />
         ) : (
-          null
+          <TvShowElement data={data} />
         )}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
       </>

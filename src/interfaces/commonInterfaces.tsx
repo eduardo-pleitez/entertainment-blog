@@ -35,3 +35,9 @@ export type MovieShortDetails = {
   posterPath: string;
   title: string;
 };
+
+export type TvShowShortDetails = {
+  id: number;
+  posterPath: string;
+  name: string;
+};
