@@ -4,6 +4,7 @@ import { BASE_URL } from '../../assets/globalVariables';
 import SectionTitle from '../Layout/SectionTitle';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
+import MovieElement from './MovieElement';
 
 export default function MoviesList() {
   const [url, setUrl] = useState(`${BASE_URL}movie/popular?language=en-US`);
@@ -12,7 +13,7 @@ export default function MoviesList() {
     <div className='sm:py-4 py-2'>
       <SectionTitle>Movies</SectionTitle>
       <>
-        {loading ? <LoadingMessage /> : null}
+        {loading ? <LoadingMessage /> : <MovieElement data={data} />}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
       </>
     </div>

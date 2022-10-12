@@ -23,3 +23,15 @@ export type Url = string;
 export type PropsText = {
   children: string;
 };
+
+export type PropsData = {
+  data: {
+    results: [];
+  };
+};
+
+export type MovieShortDetails = {
+  id: number;
+  posterPath: string;
+  title: string;
+};
