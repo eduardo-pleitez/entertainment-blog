@@ -125,3 +125,13 @@ export type PropsCrewData = {
   name: string,
   job: string,
 }
+
+export type PropsReviewsData = {
+  data: ReviewsData;
+}
+
+export type PropsReviewElement = {
+  author: string,
+  content: string,
+  createdAt: string,
+}

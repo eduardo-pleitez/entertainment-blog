@@ -4,6 +4,7 @@ import { BASE_URL } from '../../assets/globalVariables';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
 import useFetchReviews from '../../hooks/useFetchReviews';
+import ReviewsSection from '../Layout/ReviewsSection';
 
 export default function MovieReviews() {
   const params = useParams();
@@ -11,7 +12,7 @@ export default function MovieReviews() {
   const { data, loading, error } = useFetchReviews(url);
   return (
     <div>
-      {loading ? <LoadingMessage /> : null}
+      {loading ? <LoadingMessage /> : <ReviewsSection data={data} />}
       {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );
