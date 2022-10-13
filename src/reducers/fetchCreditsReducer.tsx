@@ -1,6 +1,6 @@
 import { StateCreditsData, ActionCreditsData } from '../interfaces/commonInterfaces';
 
-const fetchMovieCreditsReducer = (state: StateCreditsData, action: ActionCreditsData): StateCreditsData => {
+const fetchCreditsReducer = (state: StateCreditsData, action: ActionCreditsData): StateCreditsData => {
   switch (action.type) {
   case 'FETCH_SUCCESS':
     return {
@@ -20,4 +20,4 @@ const fetchMovieCreditsReducer = (state: StateCreditsData, action: ActionCredits
     return state;
   }
 };
-export default fetchMovieCreditsReducer;
+export default fetchCreditsReducer;

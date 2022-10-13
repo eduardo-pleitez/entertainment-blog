@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react';
-import fetchMovieCreditsReducer from '../reducers/fetchMovieCreditsReducer';
+import fetchCreditsReducer from '../reducers/fetchCreditsReducer';
 import {
   Url,
   StateCreditsData,
@@ -7,13 +7,13 @@ import {
 } from '../interfaces/commonInterfaces';
 import interceptorAxios from '../services/axiosInstance';
 
-const useFetchMovieCredits = (url: Url) => {
+const useFetchCredits = (url: Url) => {
   const initialState: StateCreditsData = {
     loading: true,
     error: '',
     data: {cast: [], crew: []},
   };
-  const [state, dispatch] = useReducer(fetchMovieCreditsReducer, initialState);
+  const [state, dispatch] = useReducer(fetchCreditsReducer, initialState);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -31,4 +31,4 @@ const useFetchMovieCredits = (url: Url) => {
 
   return state;
 };
-export default useFetchMovieCredits;
+export default useFetchCredits;

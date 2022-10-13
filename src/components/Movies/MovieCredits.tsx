@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom';
 import { BASE_URL } from '../../assets/globalVariables';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
-import useFetchMovieCredits from '../../hooks/useFetchMovieCredits';
+import useFetchCredits from '../../hooks/useFetchCredits';
 import CreditsSection from '../Layout/CreditsSection';
 
 export default function MovieCredits() {
   const params = useParams();
   const url = `${BASE_URL}movie/${params.movieId}/credits?language=en-US`;
-  const { data, loading, error } = useFetchMovieCredits(url);
+  const { data, loading, error } = useFetchCredits(url);
   return (
     <div>
       {loading ? <LoadingMessage /> : null}
