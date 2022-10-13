@@ -1,18 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
+import useFetchMovieDetails from '../../hooks/useFetchMovieDetails';
 import { BASE_URL } from '../../assets/globalVariables';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
+import MovieDetailsElement from './MovieDetailsElement';
 
 export default function MovieDetails() {
   const params = useParams();
   const url = `${BASE_URL}movie/${params.movieId}?language=en-US`;
-  const { data, loading, error } = useFetch(url);
-
+  const { data, loading, error } = useFetchMovieDetails(url);
   return (
-    <div className='sm:py-4 py-2'>
-      {loading ? <LoadingMessage /> : null}
+    <div>
+      {loading ? <LoadingMessage /> : <MovieDetailsElement data={data} />}
       {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );
