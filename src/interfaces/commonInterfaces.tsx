@@ -46,6 +46,12 @@ export type StateReviewsData = {
   data: ReviewsData;
 }
 
+export type StateSimilarMoviesData = {
+  loading: boolean;
+  error: string;
+  data: ReviewsData;
+}
+
 export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
   | { type: 'FETCH_ERROR' };
@@ -59,6 +65,10 @@ export type ActionCreditsData =
   | { type: 'FETCH_ERROR' };
  
 export type ActionReviewsData =
+  | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
+  | { type: 'FETCH_ERROR' };
+
+export type ActionSimilarMoviesData =
   | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
   | { type: 'FETCH_ERROR' };
   
@@ -75,6 +85,10 @@ export type ResponseCreditsData = {
 };
 
 export type ResponseReviewsData = {
+  data: ReviewsData;
+};
+
+export type ResponseSimilarMoviesData = {
   data: ReviewsData;
 };
 

@@ -3,6 +3,7 @@ import PageLayout from '../components/Layout/PageLayout';
 import MovieCredits from '../components/Movies/MovieCredits';
 import MovieDetails from '../components/Movies/MovieDetails';
 import MovieReviews from '../components/Movies/MovieReviews';
+import MoviesSimilar from '../components/Movies/MoviesSimilar';
 
 export default function MovieDetailsPage() {
   return (
@@ -11,6 +12,7 @@ export default function MovieDetailsPage() {
         <MovieDetails />
         <MovieCredits />
         <MovieReviews />
+        <MoviesSimilar />
       </div>
     </PageLayout>
   );
