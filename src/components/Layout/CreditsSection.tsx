@@ -2,8 +2,6 @@ import React from 'react';
 import { PropsCreditsData, PropsCastData, PropsCrewData } from '../../interfaces/commonInterfaces';
 
 export default function CreditsSection({ data }: PropsCreditsData) {
-  // eslint-disable-next-line no-console
-  console.log(data);
   return (
     <>
       <div className='p-2'>
