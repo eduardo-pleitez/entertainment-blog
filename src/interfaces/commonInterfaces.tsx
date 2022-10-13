@@ -20,11 +20,22 @@ export type MovieFullDetails = {
   releaseDate: string;
 };
 
+export type CreditsData = {
+  cast: [],
+  crew: [],
+};
+
 export type StateDetails = {
   loading: boolean;
   error: string;
   data: MovieFullDetails;
 };
+
+export type StateCreditsData = {
+  loading: boolean;
+  error: string;
+  data: CreditsData;
+}
 
 export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
@@ -34,6 +45,10 @@ export type ActionDetails =
   | { type: 'FETCH_SUCCESS'; payload: MovieFullDetails }
   | { type: 'FETCH_ERROR' };
 
+export type ActionCreditsData =
+  | { type: 'FETCH_SUCCESS'; payload: CreditsData }
+  | { type: 'FETCH_ERROR' };
+ 
 export type Response = {
   data: Data;
 };
@@ -41,6 +56,11 @@ export type Response = {
 export type ResponseDetails = {
   data: MovieFullDetails;
 };
+
+export type ResponseCreditsData = {
+  data: CreditsData;
+};
+
 export type Url = string;
 
 export type PropsText = {
