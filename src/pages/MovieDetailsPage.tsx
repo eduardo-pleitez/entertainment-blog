@@ -2,6 +2,7 @@ import React from 'react';
 import PageLayout from '../components/Layout/PageLayout';
 import MovieCredits from '../components/Movies/MovieCredits';
 import MovieDetails from '../components/Movies/MovieDetails';
+import MovieReviews from '../components/Movies/MovieReviews';
 
 export default function MovieDetailsPage() {
   return (
@@ -9,6 +10,7 @@ export default function MovieDetailsPage() {
       <div className='lg:w-9/12 md:w-11/12 sm:w-full bg-white md:p-6 p-2 mx-auto'>
         <MovieDetails />
         <MovieCredits />
+        <MovieReviews />
       </div>
     </PageLayout>
   );
