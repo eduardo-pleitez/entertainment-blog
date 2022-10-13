@@ -77,6 +77,10 @@ export type PropsDetailsData = {
   data: MovieFullDetails;
 };
 
+export type PropsCreditsData = {
+  data: CreditsData;
+}
+
 export type MovieShortDetails = {
   id: number;
   posterPath: string;
@@ -92,4 +96,15 @@ export type TvShowShortDetails = {
 export type PropsGenres = {
   id: number,
   name: string,
+}
+
+export type PropsCastData = {
+  castId: number,
+  name: string,
+  character: string,
+}
+
+export type PropsCrewData = {
+  name: string,
+  job: string,
 }
