@@ -12,7 +12,7 @@ export default function MovieDetailsElement({ data }: PropsDetailsData) {
         <div>
           {data.genres.map(({ id, name}: PropsGenres) => {
             return (
-              <span key={id} className='mx-2 p-2 bg-black text-white'>{name}</span>
+              <span key={id} className='inline-block m-1 p-2 bg-black text-white'>{name}</span>
             );
           })}
         </div>
