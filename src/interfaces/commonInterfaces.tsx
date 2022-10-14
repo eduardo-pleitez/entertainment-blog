@@ -131,6 +131,10 @@ export type PropsDetailsData = {
   data: MovieFullDetails;
 };
 
+export type PropsTvShowDetailsData = {
+  data: TvShowFullDetails;
+};
+
 export type PropsCreditsData = {
   data: CreditsData;
 }

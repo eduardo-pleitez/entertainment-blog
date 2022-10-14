@@ -4,6 +4,7 @@ import useFetchTvShowDetails from '../../hooks/useFetchTvShowDetails';
 import { BASE_URL } from '../../assets/globalVariables';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
+import TvShowDetailsElement from './TvShowDetailsElement';
 
 export default function MovieDetails() {
   const params = useParams();
@@ -11,7 +12,7 @@ export default function MovieDetails() {
   const { data, loading, error } = useFetchTvShowDetails(url);
   return (
     <div>
-      {loading ? <LoadingMessage /> : null}
+      {loading ? <LoadingMessage /> : <TvShowDetailsElement data={data} />}
       {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );
