@@ -181,8 +181,18 @@ export type PropsMoviesSimilar = {
   data: ReviewsData;
 }
 
+export type PropsTvShowSimilar = {
+  data: ReviewsData;
+}
+
 export type PropsMovieSimilarElement = {
   id: number;
   posterPath: string;
   title: string;
+}
+
+export type PropsTvShowSimilarElement = {
+  id: number;
+  posterPath: string;
+  name: string;
 }

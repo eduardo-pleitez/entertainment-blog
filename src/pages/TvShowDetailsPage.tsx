@@ -3,6 +3,7 @@ import PageLayout from '../components/Layout/PageLayout';
 import TvShowCredits from '../components/TvShows/TvShowCredits';
 import TvShowDetails from '../components/TvShows/TvShowDetails';
 import TvShowReviews from '../components/TvShows/TvShowReviews';
+import TvShowsSimilar from '../components/TvShows/TvShowsSimilar';
 
 export default function TvShowDetailsPage() {
   return (
@@ -11,6 +12,7 @@ export default function TvShowDetailsPage() {
         <TvShowDetails />
         <TvShowCredits />
         <TvShowReviews />
+        <TvShowsSimilar />
       </div>
     </PageLayout>
   );
