@@ -149,3 +149,13 @@ export type PropsReviewElement = {
   content: string,
   createdAt: string,
 }
+
+export type PropsMoviesSimilar = {
+  data: ReviewsData;
+}
+
+export type PropsMovieSimilarElement = {
+  id: number;
+  posterPath: string;
+  title: string;
+}
