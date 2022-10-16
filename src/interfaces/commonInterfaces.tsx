@@ -32,6 +32,10 @@ export type TvShowFullDetails = {
   popularity: number;
 };
 
+export type SeasonsData = {
+  seasons: [];
+}
+
 export type CreditsData = {
   cast: [],
   crew: [],
@@ -47,6 +51,12 @@ export type StateTvShowDetails = {
   loading: boolean;
   error: string;
   data: TvShowFullDetails;
+};
+
+export type StateTvShowSeasons = {
+  loading: boolean;
+  error: string;
+  data: SeasonsData;
 };
 
 export type StateCreditsData = {
@@ -79,6 +89,10 @@ export type ActionTvShowDetails =
   | { type: 'FETCH_SUCCESS'; payload: TvShowFullDetails }
   | { type: 'FETCH_ERROR' };
 
+export type ActionTvShowSeasons =
+  | { type: 'FETCH_SUCCESS'; payload: SeasonsData }
+  | { type: 'FETCH_ERROR' };
+
 export type ActionCreditsData =
   | { type: 'FETCH_SUCCESS'; payload: CreditsData }
   | { type: 'FETCH_ERROR' };
@@ -101,6 +115,10 @@ export type ResponseDetails = {
 
 export type ResponseTvShowDetails = {
   data: TvShowFullDetails;
+};
+
+export type ResponseTvShowSeasons = {
+  data: SeasonsData;
 };
 
 export type ResponseCreditsData = {
