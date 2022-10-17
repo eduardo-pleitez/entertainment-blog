@@ -1,14 +1,14 @@
 import { useEffect, useReducer } from 'react';
 import fetchMovieDetailsReducer from '../reducers/fetchMovieDetailsReducer';
 import {
-  StateDetails,
+  StateMovieDetails,
   Url,
-  ResponseDetails,
+  ResponseMovieDetails,
 } from '../interfaces/commonInterfaces';
 import interceptorAxios from '../services/axiosInstance';
 
 const useFetchDetails = (url: Url) => {
-  const initialState: StateDetails = {
+  const initialState: StateMovieDetails = {
     loading: true,
     error: '',
     data: {id: 0, posterPath: '', title: '', overview: '', genres: [], popularity: 0, releaseDate: ''},
@@ -18,8 +18,8 @@ const useFetchDetails = (url: Url) => {
     const fetchData = async () => {
       try {
         const response = await interceptorAxios.get<
-          ResponseDetails,
-          ResponseDetails
+          ResponseMovieDetails,
+          ResponseMovieDetails
           >(url);
         dispatch({ type: 'FETCH_SUCCESS', payload: response.data });
       } catch (error) {

@@ -1,6 +1,6 @@
-import { StateDetails, ActionDetails } from '../interfaces/commonInterfaces';
+import { StateMovieDetails, ActionMovieDetails } from '../interfaces/commonInterfaces';
 
-const fetchDetailsReducer = (state: StateDetails, action: ActionDetails): StateDetails => {
+const fetchDetailsReducer = (state: StateMovieDetails, action: ActionMovieDetails): StateMovieDetails => {
   switch (action.type) {
   case 'FETCH_SUCCESS':
     return {

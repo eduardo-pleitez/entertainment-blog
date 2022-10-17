@@ -44,7 +44,7 @@ export type CreditsData = {
   crew: [];
 };
 
-export type StateDetails = {
+export type StateMovieDetails = {
   loading: boolean;
   error: string;
   data: MovieFullDetails;
@@ -78,7 +78,7 @@ export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
   | { type: 'FETCH_ERROR' };
 
-export type ActionDetails =
+export type ActionMovieDetails =
   | { type: 'FETCH_SUCCESS'; payload: MovieFullDetails }
   | { type: 'FETCH_ERROR' };
 
@@ -102,7 +102,7 @@ export type Response = {
   data: Data;
 };
 
-export type ResponseDetails = {
+export type ResponseMovieDetails = {
   data: MovieFullDetails;
 };
 
