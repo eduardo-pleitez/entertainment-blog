@@ -23,6 +23,19 @@ export type MovieFullDetails = {
   releaseDate: string;
 };
 
+export type TvShowFullDetails = {
+  id: number;
+  posterPath: string;
+  name: string;
+  overview: string;
+  genres: [];
+  popularity: number;
+};
+
+export type SeasonsData = {
+  seasons: [];
+}
+
 export type CreditsData = {
   cast: [],
   crew: [],
@@ -32,6 +45,18 @@ export type StateDetails = {
   loading: boolean;
   error: string;
   data: MovieFullDetails;
+};
+
+export type StateTvShowDetails = {
+  loading: boolean;
+  error: string;
+  data: TvShowFullDetails;
+};
+
+export type StateTvShowSeasons = {
+  loading: boolean;
+  error: string;
+  data: SeasonsData;
 };
 
 export type StateCreditsData = {
@@ -60,6 +85,14 @@ export type ActionDetails =
   | { type: 'FETCH_SUCCESS'; payload: MovieFullDetails }
   | { type: 'FETCH_ERROR' };
 
+export type ActionTvShowDetails =
+  | { type: 'FETCH_SUCCESS'; payload: TvShowFullDetails }
+  | { type: 'FETCH_ERROR' };
+
+export type ActionTvShowSeasons =
+  | { type: 'FETCH_SUCCESS'; payload: SeasonsData }
+  | { type: 'FETCH_ERROR' };
+
 export type ActionCreditsData =
   | { type: 'FETCH_SUCCESS'; payload: CreditsData }
   | { type: 'FETCH_ERROR' };
@@ -78,6 +111,14 @@ export type Response = {
 
 export type ResponseDetails = {
   data: MovieFullDetails;
+};
+
+export type ResponseTvShowDetails = {
+  data: TvShowFullDetails;
+};
+
+export type ResponseTvShowSeasons = {
+  data: SeasonsData;
 };
 
 export type ResponseCreditsData = {
@@ -106,6 +147,10 @@ export type PropsData = {
 
 export type PropsDetailsData = {
   data: MovieFullDetails;
+};
+
+export type PropsTvShowDetailsData = {
+  data: TvShowFullDetails;
 };
 
 export type PropsCreditsData = {
@@ -154,8 +199,28 @@ export type PropsMoviesSimilar = {
   data: ReviewsData;
 }
 
+export type PropsTvShowSimilar = {
+  data: ReviewsData;
+}
+
 export type PropsMovieSimilarElement = {
   id: number;
   posterPath: string;
   title: string;
+}
+
+export type PropsTvShowSimilarElement = {
+  id: number;
+  posterPath: string;
+  name: string;
+}
+
+export type PropsTvShowSeasons = {
+  data: SeasonsData;
+}
+
+export type PropsTvShowSeasonElement = {
+  id: number;
+  posterPath: string;
+  name: string;
 }
