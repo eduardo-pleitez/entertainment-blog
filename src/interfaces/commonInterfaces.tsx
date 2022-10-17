@@ -1,16 +1,11 @@
 export type Data = {
   results: [];
-  totalPages: number;
 };
 
-export type ReviewsData = {
-  results: [];
-}
 export type State = {
   loading: boolean;
   error: string;
   data: Data;
-  totalPages: number;
 };
 
 export type MovieFullDetails = {
@@ -45,11 +40,11 @@ export type SeasonsData = {
 }
 
 export type CreditsData = {
-  cast: [],
-  crew: [],
+  cast: [];
+  crew: [];
 };
 
-export type StateDetails = {
+export type StateMovieDetails = {
   loading: boolean;
   error: string;
   data: MovieFullDetails;
@@ -73,18 +68,6 @@ export type StateCreditsData = {
   data: CreditsData;
 }
 
-export type StateReviewsData = {
-  loading: boolean;
-  error: string;
-  data: ReviewsData;
-}
-
-export type StateSimilarMoviesData = {
-  loading: boolean;
-  error: string;
-  data: ReviewsData;
-}
-
 export type StateSeasonDetails = {
   loading: boolean;
   error: string;
@@ -95,7 +78,7 @@ export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
   | { type: 'FETCH_ERROR' };
 
-export type ActionDetails =
+export type ActionMovieDetails =
   | { type: 'FETCH_SUCCESS'; payload: MovieFullDetails }
   | { type: 'FETCH_ERROR' };
 
@@ -110,14 +93,6 @@ export type ActionTvShowSeasons =
 export type ActionCreditsData =
   | { type: 'FETCH_SUCCESS'; payload: CreditsData }
   | { type: 'FETCH_ERROR' };
- 
-export type ActionReviewsData =
-  | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
-  | { type: 'FETCH_ERROR' };
-
-export type ActionSimilarMoviesData =
-  | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
-  | { type: 'FETCH_ERROR' };
 
 export type ActionSeasonDetails =
   | { type: 'FETCH_SUCCESS'; payload: SeasonFullDetails }
@@ -127,7 +102,7 @@ export type Response = {
   data: Data;
 };
 
-export type ResponseDetails = {
+export type ResponseMovieDetails = {
   data: MovieFullDetails;
 };
 
@@ -143,14 +118,6 @@ export type ResponseCreditsData = {
   data: CreditsData;
 };
 
-export type ResponseReviewsData = {
-  data: ReviewsData;
-};
-
-export type ResponseSimilarMoviesData = {
-  data: ReviewsData;
-};
-
 export type ResponseSeasonDetails = {
   data: SeasonFullDetails;
 };
@@ -161,11 +128,14 @@ export type PropsText = {
   children: string;
 };
 
-export type PropsData = {
-  data: {
-    results: [];
-  };
+export type PropsResultData = {
+  data: Data
 };
+
+export type PropsPagination = {
+  apiPagesLimit: number,
+  handlePagination: (selectedItem: { selected: number; }) => void,
+}
 
 export type PropsDetailsData = {
   data: MovieFullDetails;
@@ -192,37 +162,25 @@ export type TvShowShortDetails = {
 };
 
 export type PropsGenres = {
-  id: number,
-  name: string,
+  id: number;
+  name: string;
 }
 
 export type PropsCastData = {
-  castId: number,
-  name: string,
-  character: string,
+  castId: number;
+  name: string;
+  character: string;
 }
 
 export type PropsCrewData = {
-  name: string,
-  job: string,
-}
-
-export type PropsReviewsData = {
-  data: ReviewsData;
+  name: string;
+  job: string;
 }
 
 export type PropsReviewElement = {
-  author: string,
-  content: string,
-  createdAt: string,
-}
-
-export type PropsMoviesSimilar = {
-  data: ReviewsData;
-}
-
-export type PropsTvShowSimilar = {
-  data: ReviewsData;
+  author: string;
+  content: string;
+  createdAt: string;
 }
 
 export type PropsMovieSimilarElement = {
@@ -254,8 +212,8 @@ export type PropsSeasonDetailsData = {
 };
 
 export type PropsEpisodes = {
-  id: number,
-  name: string,
-  overview: string,
-  stillPath: string,
+  id: number;
+  name: string;
+  overview: string;
+  stillPath: string;
 }

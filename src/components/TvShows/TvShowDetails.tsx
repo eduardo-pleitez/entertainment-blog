@@ -6,7 +6,7 @@ import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
 import TvShowDetailsElement from './TvShowDetailsElement';
 
-export default function MovieDetails() {
+export default function TvShowDetails() {
   const params = useParams();
   const url = `${BASE_URL}tv/${params.tvShowId}?language=en-US`;
   const { data, loading, error } = useFetchTvShowDetails(url);

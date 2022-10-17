@@ -12,8 +12,8 @@ export default function TvShowCredits() {
   const { data, loading, error } = useFetchCredits(url);
   return (
     <div>
-      {loading ? <LoadingMessage /> : null}
-      {error ? <ErrorMessage>{error}</ErrorMessage> : <CreditsSection data={data} />}
+      {loading ? <LoadingMessage /> : <CreditsSection data={data} />}
+      {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );
 }

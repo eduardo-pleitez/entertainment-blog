@@ -7,15 +7,13 @@ const fetchReducer = (state: State, action: Action): State => {
       ...state,
       loading: false,
       data: action.payload,
-      totalPages: 500,
       error: '',
     };
   case 'FETCH_ERROR':
     return {
       ...state,
       loading: false,
-      data: { results: [], totalPages: 0 },
-      totalPages: 0,
+      data: { results: [] },
       error: 'Something went wrong!',
     };
   default:

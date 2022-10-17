@@ -7,8 +7,7 @@ const useFetch = (url: Url) => {
   const initialState: State = {
     loading: true,
     error: '',
-    data: { results: [], totalPages: 0 },
-    totalPages: 0,
+    data: { results: [] }
   };
   const [state, dispatch] = useReducer(fetchReducer, initialState);
   useEffect(() => {
