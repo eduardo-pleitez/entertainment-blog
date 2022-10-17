@@ -68,12 +68,6 @@ export type StateCreditsData = {
   data: CreditsData;
 }
 
-export type StateSimilarData = {
-  loading: boolean;
-  error: string;
-  data: ReviewsData;
-}
-
 export type StateSeasonDetails = {
   loading: boolean;
   error: string;
@@ -100,10 +94,6 @@ export type ActionCreditsData =
   | { type: 'FETCH_SUCCESS'; payload: CreditsData }
   | { type: 'FETCH_ERROR' };
 
-export type ActionSimilarData =
-  | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
-  | { type: 'FETCH_ERROR' };
-
 export type ActionSeasonDetails =
   | { type: 'FETCH_SUCCESS'; payload: SeasonFullDetails }
   | { type: 'FETCH_ERROR' };
@@ -126,14 +116,6 @@ export type ResponseTvShowSeasons = {
 
 export type ResponseCreditsData = {
   data: CreditsData;
-};
-
-export type ResponseReviewsData = {
-  data: ReviewsData;
-};
-
-export type ResponseSimilarMoviesData = {
-  data: ReviewsData;
 };
 
 export type ResponseSeasonDetails = {
@@ -192,22 +174,10 @@ export type PropsCrewData = {
   job: string,
 }
 
-export type PropsReviewsData = {
-  data: ReviewsData;
-}
-
 export type PropsReviewElement = {
   author: string,
   content: string,
   createdAt: string,
-}
-
-export type PropsMoviesSimilar = {
-  data: ReviewsData;
-}
-
-export type PropsTvShowSimilar = {
-  data: ReviewsData;
 }
 
 export type PropsMovieSimilarElement = {
