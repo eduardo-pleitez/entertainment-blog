@@ -129,9 +129,7 @@ export type PropsText = {
 };
 
 export type PropsResultData = {
-  data: {
-    results: [];
-  };
+  data: Data
 };
 
 export type PropsDetailsData = {

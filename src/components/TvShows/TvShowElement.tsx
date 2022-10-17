@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
   TvShowShortDetails,
-  PropsData,
+  PropsResultData,
 } from '../../interfaces/commonInterfaces';
 
-export default function TvShowElement({ data }: PropsData) {
+export default function TvShowElement({ data }: PropsResultData) {
   return (
     <div
       className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 p-3 sm:w-10/12 w-full mx-auto 
