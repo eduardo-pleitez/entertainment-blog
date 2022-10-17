@@ -167,9 +167,10 @@ export type PropsGenres = {
 }
 
 export type PropsCastData = {
-  castId: number;
+  id: number;
   name: string;
   character: string;
+  profilePath: string;
 }
 
 export type PropsCrewData = {
