@@ -4,6 +4,7 @@ import useFetchSeasonDetails from '../../hooks/useFetchSeasonDetails';
 import { BASE_URL } from '../../assets/globalVariables';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
+import SeasonDetailsElement from './SeasonDetailsElement';
 
 export default function SeasonDetails() {
   const params = useParams();
@@ -11,7 +12,7 @@ export default function SeasonDetails() {
   const { data, loading, error } = useFetchSeasonDetails(url);
   return (
     <div>
-      {loading ? <LoadingMessage /> : null}
+      {loading ? <LoadingMessage /> : <SeasonDetailsElement data={data} />}
       {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );

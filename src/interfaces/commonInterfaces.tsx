@@ -248,3 +248,14 @@ export type PropsTvShowSeasonElement = {
   name: string;
   seasonNumber: number;
 }
+
+export type PropsSeasonDetailsData = {
+  data: SeasonFullDetails;
+};
+
+export type PropsEpisodes = {
+  id: number,
+  name: string,
+  overview: string,
+  stillPath: string,
+}
