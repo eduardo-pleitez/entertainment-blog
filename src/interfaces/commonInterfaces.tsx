@@ -128,7 +128,7 @@ export type PropsText = {
   children: string;
 };
 
-export type PropsData = {
+export type PropsResultData = {
   data: {
     results: [];
   };

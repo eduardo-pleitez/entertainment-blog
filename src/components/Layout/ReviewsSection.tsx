@@ -1,5 +1,5 @@
 import React from 'react';
-import { PropsReviewElement, PropsReviewsData } from '../../interfaces/commonInterfaces';
+import { PropsReviewElement, PropsResultData } from '../../interfaces/commonInterfaces';
 import {
   Accordion,
   AccordionItem,
@@ -7,7 +7,7 @@ import {
   AccordionPanel,
 } from '@chakra-ui/accordion';
 
-export default function ReviewsSection({ data }: PropsReviewsData) {
+export default function ReviewsSection({ data }: PropsResultData) {
   return (
     <div>
       {data.results.length > 0 ? <div>

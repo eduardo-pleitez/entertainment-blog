@@ -1,11 +1,11 @@
 import React from 'react';
-import { PropsMovieSimilarElement, PropsMoviesSimilar } from '../../interfaces/commonInterfaces';
+import { PropsMovieSimilarElement, PropsResultData } from '../../interfaces/commonInterfaces';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function MoviesSimilarSection({ data }: PropsMoviesSimilar) {
+export default function MoviesSimilarSection({ data }: PropsResultData) {
   const settings = {
     centerMode: true,
     infinite: true,
