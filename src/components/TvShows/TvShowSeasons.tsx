@@ -4,6 +4,7 @@ import { BASE_URL } from '../../assets/globalVariables';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
 import useFetchTvShowSeasons from '../../hooks/useFetchTvShowSeasons';
+import TvShowSeasonsSection from '../Layout/TvShowSeasonsSection';
 
 export default function TvShowSeasons() {
   const params = useParams();
@@ -11,7 +12,7 @@ export default function TvShowSeasons() {
   const { data, loading, error } = useFetchTvShowSeasons(url);
   return (
     <div>
-      {loading ? <LoadingMessage /> : null}
+      {loading ? <LoadingMessage /> : <TvShowSeasonsSection data={data} />}
       {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );

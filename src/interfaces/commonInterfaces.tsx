@@ -214,3 +214,13 @@ export type PropsTvShowSimilarElement = {
   posterPath: string;
   name: string;
 }
+
+export type PropsTvShowSeasons = {
+  data: SeasonsData;
+}
+
+export type PropsTvShowSeasonElement = {
+  id: number;
+  posterPath: string;
+  name: string;
+}
