@@ -9,7 +9,8 @@ import Pagination from '../Layout/Pagination';
 
 export default function MoviesList() {
   const [url, setUrl] = useState(`${BASE_URL}movie/popular?language=en-US`);
-  const { data, loading, error, totalPages } = useFetch(url);
+  const { data, loading, error } = useFetch(url);
+  const apiPagesLimit = 500;
   function handlePagination(selectedItem: { selected: number }) {
     setUrl(
       `${BASE_URL}movie/popular/?language=en-US&page=${
@@ -24,7 +25,7 @@ export default function MoviesList() {
         {loading ? <LoadingMessage /> : <MovieElement data={data} />}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
       </>
-      <Pagination totalPages={totalPages} handlePagination={handlePagination} />
+      <Pagination apiPagesLimit={apiPagesLimit} handlePagination={handlePagination} />
     </div>
   );
 }

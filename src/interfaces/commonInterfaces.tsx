@@ -1,16 +1,11 @@
 export type Data = {
   results: [];
-  totalPages: number;
 };
 
-export type ReviewsData = {
-  results: [];
-}
 export type State = {
   loading: boolean;
   error: string;
   data: Data;
-  totalPages: number;
 };
 
 export type MovieFullDetails = {
@@ -73,12 +68,6 @@ export type StateCreditsData = {
   data: CreditsData;
 }
 
-export type StateReviewsData = {
-  loading: boolean;
-  error: string;
-  data: ReviewsData;
-}
-
 export type StateSimilarData = {
   loading: boolean;
   error: string;
@@ -109,10 +98,6 @@ export type ActionTvShowSeasons =
 
 export type ActionCreditsData =
   | { type: 'FETCH_SUCCESS'; payload: CreditsData }
-  | { type: 'FETCH_ERROR' };
- 
-export type ActionReviewsData =
-  | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
   | { type: 'FETCH_ERROR' };
 
 export type ActionSimilarData =

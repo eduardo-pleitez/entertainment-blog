@@ -9,7 +9,8 @@ import Pagination from '../Layout/Pagination';
 
 export default function TvShowsList() {
   const [url, setUrl] = useState(`${BASE_URL}tv/popular?language=en-US`);
-  const { data, loading, error, totalPages } = useFetch(url);
+  const { data, loading, error } = useFetch(url);
+  const apiPagesLimit = 500;
   function handlePagination(selectedItem: { selected: number }) {
     setUrl(
       `${BASE_URL}tv/popular?language=en-US&page=${selectedItem.selected + 1}`
@@ -22,7 +23,7 @@ export default function TvShowsList() {
         {loading ? <LoadingMessage /> : <TvShowElement data={data} />}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
       </>
-      <Pagination totalPages={totalPages} handlePagination={handlePagination} />
+      <Pagination apiPagesLimit={apiPagesLimit} handlePagination={handlePagination} />
     </div>
   );
 }
