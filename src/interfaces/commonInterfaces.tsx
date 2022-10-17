@@ -217,10 +217,12 @@ export type PropsTvShowSimilarElement = {
 
 export type PropsTvShowSeasons = {
   data: SeasonsData;
+  tvShowId: string;
 }
 
 export type PropsTvShowSeasonElement = {
   id: number;
   posterPath: string;
   name: string;
+  seasonNumber: number;
 }

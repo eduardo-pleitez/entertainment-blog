@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 
-export default function TvShowSeasonsSection({ data }: PropsTvShowSeasons) {
+export default function TvShowSeasonsSection({ data, tvShowId }: PropsTvShowSeasons) {
   const settings = {
     centerMode: true,
     infinite: true,
@@ -39,10 +39,10 @@ export default function TvShowSeasonsSection({ data }: PropsTvShowSeasons) {
       <h2 className='text-center lg:text-2xl text-lg'>Tv Show Seasons</h2>
       <div className='px-8 my-4 bg-black sm:w-1/2 mx-auto'>
         <Slider {...settings}>
-          {data.seasons.map(({ id, posterPath, name }:PropsTvShowSeasonElement) => {
+          {data.seasons.map(({ id, posterPath, name, seasonNumber }: PropsTvShowSeasonElement) => {
             return (
               <div key={id}>
-                <Link to={'/season/' + id}>
+                <Link to={'/tvshow/' + tvShowId + '/season/' + seasonNumber}>
                   <img src={`https://image.tmdb.org/t/p/w154/${posterPath}`} />
                   <p className='text-white'>{name}</p>
                 </Link>
