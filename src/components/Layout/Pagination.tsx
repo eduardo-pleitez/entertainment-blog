@@ -1,11 +1,8 @@
 import React from 'react';
 import ReactPaginate from 'react-paginate';
+import { PropsPagination } from '../../interfaces/commonInterfaces';
 
-type Props = {
-  apiPagesLimit: number,
-  handlePagination: (selectedItem: { selected: number; }) => void,
-}
-export default function Pagination({ apiPagesLimit, handlePagination }: Props) {
+export default function Pagination({ apiPagesLimit, handlePagination }: PropsPagination) {
   const paginationStyles = 'sm:px-3 px-1.5 sm:py-2 py-1 border border-gray-300 rounded hover:bg-gray-100 sm:text-base text-xs';
   return (
     <div className='flex justify-center py-3'>

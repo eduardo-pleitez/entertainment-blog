@@ -132,6 +132,11 @@ export type PropsResultData = {
   data: Data
 };
 
+export type PropsPagination = {
+  apiPagesLimit: number,
+  handlePagination: (selectedItem: { selected: number; }) => void,
+}
+
 export type PropsDetailsData = {
   data: MovieFullDetails;
 };
