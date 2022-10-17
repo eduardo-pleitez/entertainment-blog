@@ -32,6 +32,14 @@ export type TvShowFullDetails = {
   popularity: number;
 };
 
+export type SeasonFullDetails = {
+  id: number;
+  name: string;
+  overview: string;
+  posterPath: string;
+  episodes: [];
+};
+
 export type SeasonsData = {
   seasons: [];
 }
@@ -77,6 +85,12 @@ export type StateSimilarMoviesData = {
   data: ReviewsData;
 }
 
+export type StateSeasonDetails = {
+  loading: boolean;
+  error: string;
+  data: SeasonFullDetails;
+};
+
 export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
   | { type: 'FETCH_ERROR' };
@@ -104,7 +118,11 @@ export type ActionReviewsData =
 export type ActionSimilarMoviesData =
   | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
   | { type: 'FETCH_ERROR' };
-  
+
+export type ActionSeasonDetails =
+  | { type: 'FETCH_SUCCESS'; payload: SeasonFullDetails }
+  | { type: 'FETCH_ERROR' };
+
 export type Response = {
   data: Data;
 };
@@ -131,6 +149,10 @@ export type ResponseReviewsData = {
 
 export type ResponseSimilarMoviesData = {
   data: ReviewsData;
+};
+
+export type ResponseSeasonDetails = {
+  data: SeasonFullDetails;
 };
 
 export type Url = string;
@@ -217,10 +239,23 @@ export type PropsTvShowSimilarElement = {
 
 export type PropsTvShowSeasons = {
   data: SeasonsData;
+  tvShowId: string;
 }
 
 export type PropsTvShowSeasonElement = {
   id: number;
   posterPath: string;
   name: string;
+  seasonNumber: number;
+}
+
+export type PropsSeasonDetailsData = {
+  data: SeasonFullDetails;
+};
+
+export type PropsEpisodes = {
+  id: number,
+  name: string,
+  overview: string,
+  stillPath: string,
 }
