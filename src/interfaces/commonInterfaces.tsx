@@ -40,8 +40,8 @@ export type SeasonsData = {
 }
 
 export type CreditsData = {
-  cast: [],
-  crew: [],
+  cast: [];
+  crew: [];
 };
 
 export type StateDetails = {
@@ -159,25 +159,25 @@ export type TvShowShortDetails = {
 };
 
 export type PropsGenres = {
-  id: number,
-  name: string,
+  id: number;
+  name: string;
 }
 
 export type PropsCastData = {
-  castId: number,
-  name: string,
-  character: string,
+  castId: number;
+  name: string;
+  character: string;
 }
 
 export type PropsCrewData = {
-  name: string,
-  job: string,
+  name: string;
+  job: string;
 }
 
 export type PropsReviewElement = {
-  author: string,
-  content: string,
-  createdAt: string,
+  author: string;
+  content: string;
+  createdAt: string;
 }
 
 export type PropsMovieSimilarElement = {
@@ -209,8 +209,8 @@ export type PropsSeasonDetailsData = {
 };
 
 export type PropsEpisodes = {
-  id: number,
-  name: string,
-  overview: string,
-  stillPath: string,
+  id: number;
+  name: string;
+  overview: string;
+  stillPath: string;
 }
