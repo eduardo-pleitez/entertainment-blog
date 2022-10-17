@@ -79,7 +79,7 @@ export type StateReviewsData = {
   data: ReviewsData;
 }
 
-export type StateSimilarMoviesData = {
+export type StateSimilarData = {
   loading: boolean;
   error: string;
   data: ReviewsData;
@@ -115,7 +115,7 @@ export type ActionReviewsData =
   | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
   | { type: 'FETCH_ERROR' };
 
-export type ActionSimilarMoviesData =
+export type ActionSimilarData =
   | { type: 'FETCH_SUCCESS'; payload: ReviewsData }
   | { type: 'FETCH_ERROR' };
 

@@ -1,6 +1,6 @@
-import { StateSimilarMoviesData, ActionSimilarMoviesData } from '../interfaces/commonInterfaces';
+import { StateSimilarData, ActionSimilarData } from '../interfaces/commonInterfaces';
 
-const fetchSimilarMoviesReducer = (state: StateSimilarMoviesData, action: ActionSimilarMoviesData): StateSimilarMoviesData => {
+const fetchSimilarDataReducer = (state: StateSimilarData, action: ActionSimilarData): StateSimilarData => {
   switch (action.type) {
   case 'FETCH_SUCCESS':
     return {
@@ -20,4 +20,4 @@ const fetchSimilarMoviesReducer = (state: StateSimilarMoviesData, action: Action
     return state;
   }
 };
-export default fetchSimilarMoviesReducer;
+export default fetchSimilarDataReducer;

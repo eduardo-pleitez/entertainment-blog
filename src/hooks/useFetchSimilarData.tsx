@@ -1,19 +1,19 @@
 import { useEffect, useReducer } from 'react';
-import fetchSimilarMoviesReducer from '../reducers/fetchSimilarMoviesReducer';
+import fetchSimilarDataReducer from '../reducers/fetchSimilarDataReducer';
 import {
   Url,
-  StateSimilarMoviesData,
+  StateSimilarData,
   ResponseSimilarMoviesData,
 } from '../interfaces/commonInterfaces';
 import interceptorAxios from '../services/axiosInstance';
 
 const useFetchSimilarMovies = (url: Url) => {
-  const initialState: StateSimilarMoviesData = {
+  const initialState: StateSimilarData = {
     loading: true,
     error: '',
     data: {results: []},
   };
-  const [state, dispatch] = useReducer(fetchSimilarMoviesReducer, initialState);
+  const [state, dispatch] = useReducer(fetchSimilarDataReducer, initialState);
   useEffect(() => {
     const fetchData = async () => {
       try {
