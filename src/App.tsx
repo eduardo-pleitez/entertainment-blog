@@ -5,10 +5,12 @@ import Home from './pages/Home';
 import MovieDetailsPage from './pages/MovieDetailsPage';
 import TvShowDetailsPage from './pages/TvShowDetailsPage';
 import SeasonDetailsPage from './pages/SeasonDetailsPage';
+import ErrorPage from './pages/404';
 
 function App() {
   return (
     <Routes>
+      <Route path='*' element={<ErrorPage />} />
       <Route path='/' element={<Home />} />
       <Route path='/movie/:movieId' element={<MovieDetailsPage />} />
       <Route path='/tvshow/:tvShowId' element={<TvShowDetailsPage />} />
