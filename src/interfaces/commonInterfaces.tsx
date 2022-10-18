@@ -35,6 +35,15 @@ export type SeasonFullDetails = {
   episodes: [];
 };
 
+export type PersonFullDetails = {
+  id: number;
+  name: string;
+  profilePath: string;
+  placeOfBirth: string;
+  birthday: string;
+  biography: string;
+};
+
 export type SeasonsData = {
   seasons: [];
 }
@@ -74,6 +83,12 @@ export type StateSeasonDetails = {
   data: SeasonFullDetails;
 };
 
+export type StatePersonDetails = {
+  loading: boolean;
+  error: string;
+  data: PersonFullDetails;
+};
+
 export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
   | { type: 'FETCH_ERROR' };
@@ -98,6 +113,10 @@ export type ActionSeasonDetails =
   | { type: 'FETCH_SUCCESS'; payload: SeasonFullDetails }
   | { type: 'FETCH_ERROR' };
 
+export type ActionPersonDetails =
+  | { type: 'FETCH_SUCCESS'; payload: PersonFullDetails }
+  | { type: 'FETCH_ERROR' };
+
 export type Response = {
   data: Data;
 };
@@ -120,6 +139,10 @@ export type ResponseCreditsData = {
 
 export type ResponseSeasonDetails = {
   data: SeasonFullDetails;
+};
+
+export type ResponsePersonDetails = {
+  data: PersonFullDetails;
 };
 
 export type Url = string;
