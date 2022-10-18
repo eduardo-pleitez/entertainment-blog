@@ -13,7 +13,7 @@ export default function MoviesList() {
   const apiPagesLimit = 500;
   function handlePagination(selectedItem: { selected: number }) {
     setUrl(
-      `${BASE_URL}movie/popular/?language=en-US&page=${
+      `${BASE_URL}movie/popular?language=en-US&page=${
         selectedItem.selected + 1
       }`
     );
