@@ -4,6 +4,7 @@ import useFetchPersonDetails from '../../hooks/useFetchPersonDetails';
 import { BASE_URL } from '../../assets/globalVariables';
 import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
+import PersonDetailsElement from './PersonDetailsElement';
 
 export default function PersonDetails() {
   const params = useParams();
@@ -11,7 +12,7 @@ export default function PersonDetails() {
   const { data, loading, error } = useFetchPersonDetails(url);
   return (
     <div>
-      {loading ? <LoadingMessage /> : null}
+      {loading ? <LoadingMessage /> : <PersonDetailsElement data={data} />}
       {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );

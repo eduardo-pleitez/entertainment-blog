@@ -241,3 +241,7 @@ export type PropsEpisodes = {
   overview: string;
   stillPath: string;
 }
+
+export type PropsPersonDetailsData = {
+  data: PersonFullDetails;
+};
