@@ -2,11 +2,22 @@ export type Data = {
   results: [];
 };
 
+export type DataSearch = {
+  results: [];
+  totalPages: number;
+}
+
 export type State = {
   loading: boolean;
   error: string;
   data: Data;
 };
+
+export type StateSearch = {
+  loading: boolean;
+  error: string;
+  data: DataSearch;
+}
 
 export type MovieFullDetails = {
   id: number;
@@ -93,6 +104,10 @@ export type Action =
   | { type: 'FETCH_SUCCESS'; payload: Data }
   | { type: 'FETCH_ERROR' };
 
+export type ActionSearch =
+  | { type: 'FETCH_SUCCESS'; payload: DataSearch }
+  | { type: 'FETCH_ERROR' };
+
 export type ActionMovieDetails =
   | { type: 'FETCH_SUCCESS'; payload: MovieFullDetails }
   | { type: 'FETCH_ERROR' };
@@ -119,6 +134,10 @@ export type ActionPersonDetails =
 
 export type Response = {
   data: Data;
+};
+
+export type ResponseSearch = {
+  data: DataSearch;
 };
 
 export type ResponseMovieDetails = {
@@ -175,6 +194,15 @@ export type PropsCreditsData = {
 export type MovieShortDetails = {
   id: number;
   posterPath: string;
+  title: string;
+};
+
+export type SearchResultDetails = {
+  id: number;
+  posterPath: string;
+  profilePath: string;
+  mediaType: string;
+  name: string;
   title: string;
 };
 

@@ -6,8 +6,8 @@ export default function Header() {
   return (
     <nav className='bg-black border-gray-200 lg:px-8 px-4 lg:py-6 md:py-4 py-1'>
       <div className='container flex flex-wrap justify-between items-center'>
-        <Link to='/' className='flex items-center'>
-          <span className='self-center lg:text-5xl md:text-2xl text-xl font-semibold whitespace-nowrap text-white'>
+        <Link to='/' className='flex items-center w-5/12'>
+          <span className='self-center lg:text-4xl md:text-2xl text-xl font-semibold whitespace-nowrap text-white'>
             Shows blog
           </span>
         </Link>
@@ -37,7 +37,7 @@ export default function Header() {
         <div
           className={`${
             isExpanded ? 'block' : 'hidden'
-          } w-full md:block md:w-1/2 lg:text-2xl text-sm`}
+          } w-full md:block md:w-5/12 lg:text-2xl text-sm`}
           id='navbar-default'
         >
           <ul className='flex flex-col bg-black md:flex-row md:justify-items-start md:space-x-8 md:mt-0 md:font-medium md:border-0'>
@@ -48,6 +48,15 @@ export default function Header() {
                 aria-current='page'
               >
                 Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to='/search'
+                className='block py-3 pr-4 pl-3 text-white rounded md:bg-transparent md:p-0'
+                aria-current='page'
+              >
+                Search content
               </Link>
             </li>
           </ul>
