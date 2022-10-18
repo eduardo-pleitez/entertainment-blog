@@ -25,10 +25,10 @@ export default function SearchPage() {
   return (
     <PageLayout>
       <div>
-        <div className='mx-auto p-6 flex w-1/2 items-center justify-evenly'>
-          <label className='font-bold' htmlFor="inputSearchMulti">Search content: </label>
-          <input className='border border-black w-1/2 p-2' type="text" name="inputSearchText" id="inputSeachText" onChange={handleChange} />
-          <input className='text-white bg-black p-2 cursor-pointer rounded' type="button" value="Search" onClick={handleSearch}/>
+        <div className='mx-auto p-6 flex lg:w-1/2 sm:flex-row flex-col sm:items-center items-start justify-evenly'>
+          <label className='font-bold ' htmlFor="inputSearchMulti">Search content: </label>
+          <input className='border border-black sm:w-1/2 p-2 my-2 w-full' type="text" name="inputSearchText" id="inputSeachText" onChange={handleChange} />
+          <input className='text-white bg-black p-2 cursor-pointer rounded sm:w-auto w-full' type="button" value="Search" onClick={handleSearch}/>
         </div>
         <SearchList url={url} setUrl={setUrl} textRef={textRef} />
       </div>
