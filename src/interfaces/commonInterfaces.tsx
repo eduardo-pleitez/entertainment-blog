@@ -197,6 +197,15 @@ export type MovieShortDetails = {
   title: string;
 };
 
+export type SearchResultDetails = {
+  id: number;
+  posterPath: string;
+  profilePath: string;
+  mediaType: string;
+  name: string;
+  title: string;
+};
+
 export type TvShowShortDetails = {
   id: number;
   posterPath: string;

@@ -4,6 +4,7 @@ import LoadingMessage from '../Layout/LoadingMessage';
 import ErrorMessage from '../Layout/ErrorMessage';
 import Pagination from '../Layout/Pagination';
 import { BASE_URL } from '../../assets/globalVariables';
+import SearchResultElement from './SearchResultElement';
 
 type searchListProps = {
   url: string;
@@ -31,7 +32,7 @@ function SearchList({ url, setUrl, textRef }: searchListProps) {
   return (
     <div className='sm:py-4 py-2'>
       <>
-        {loading ? <LoadingMessage /> : null}
+        {loading ? <LoadingMessage /> : <SearchResultElement data={data} />}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
       </>
       <Pagination apiPagesLimit={data.totalPages} handlePagination={handlePagination} />
