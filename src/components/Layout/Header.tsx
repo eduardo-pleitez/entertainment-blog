@@ -8,7 +8,7 @@ export default function Header() {
       <div className='container flex flex-wrap justify-between items-center'>
         <Link to='/' className='flex items-center w-5/12'>
           <span className='self-center lg:text-4xl md:text-2xl text-xl font-semibold whitespace-nowrap text-white'>
-            Shows blog
+            Entertainment blog
           </span>
         </Link>
         <button
