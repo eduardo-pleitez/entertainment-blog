@@ -2,6 +2,16 @@ export type Data = {
   results: [];
 };
 
+export type CertificationData = {
+  certifications: {
+    us: [];
+  }
+}
+
+export type GenresData = {
+  genres: [];
+}
+
 export type DataSearch = {
   results: [];
   totalPages: number;
@@ -136,6 +146,14 @@ export type Response = {
   data: Data;
 };
 
+export type ResponseCertification = {
+  data: CertificationData;
+};
+
+export type ResponseGenres = {
+  data: GenresData;
+};
+
 export type ResponseSearch = {
   data: DataSearch;
 };
@@ -163,6 +181,15 @@ export type ResponseSeasonDetails = {
 export type ResponsePersonDetails = {
   data: PersonFullDetails;
 };
+
+export type CertificationDetails = {
+  certification: string;
+}
+
+export type GenresDetails = {
+  id: number;
+  name: string;
+}
 
 export type Url = string;
 
