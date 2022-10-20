@@ -4,7 +4,7 @@ import { PropsTvShowDetailsData, PropsGenres } from '../../interfaces/commonInte
 export default function TvShowDetailsElement({ data }: PropsTvShowDetailsData) {
   return (
     <div key={data.id} className='flex md:flex-row flex-col'>
-      <div className='flex my-2 md:pr-5'>
+      <div className='my-2 md:pr-5'>
         <img src={`https://image.tmdb.org/t/p/w185/${data.posterPath}`} />
       </div>
       <div className='md:w-3/4'>
