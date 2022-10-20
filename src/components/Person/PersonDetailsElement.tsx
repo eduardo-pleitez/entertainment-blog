@@ -13,11 +13,17 @@ export default function PersonDetailsElement({ data }: PropsPersonDetailsData) {
         <p>{data.placeOfBirth}</p>
         <p className='text-lg mt-4'>Birthday:</p>
         <p>{data.birthday}</p>
-        {
-          data.biography !== '' ? <div><p className='text-lg mt-4'>Biography:</p>
-            <p>{data.biography}</p></div> : <div><p className='text-lg mt-4'>Biography: </p><p
-            className='text-red-700'>Details not found.</p></div>
-        }
+        {data.biography !== '' ? (
+          <div>
+            <p className='text-lg mt-4'>Biography:</p>
+            <p>{data.biography}</p>
+          </div>
+        ) : (
+          <div>
+            <p className='text-lg mt-4'>Biography: </p>
+            <p className='text-red-700'>Details not found.</p>
+          </div>
+        )}
       </div>
     </div>
   );

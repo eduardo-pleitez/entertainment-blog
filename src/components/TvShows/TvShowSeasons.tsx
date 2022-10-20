@@ -13,7 +13,11 @@ export default function TvShowSeasons() {
   const { data, loading, error } = useFetchTvShowSeasons(url);
   return (
     <div>
-      {loading ? <LoadingMessage /> : <TvShowSeasonsSection data={data} tvShowId={tvShowId} />}
+      {loading ? (
+        <LoadingMessage />
+      ) : (
+        <TvShowSeasonsSection data={data} tvShowId={tvShowId} />
+      )}
       {error ? <ErrorMessage>{error}</ErrorMessage> : null}
     </div>
   );

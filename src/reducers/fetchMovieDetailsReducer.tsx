@@ -1,6 +1,6 @@
 import { StateMovieDetails, ActionMovieDetails } from '../interfaces/commonInterfaces';
 
-const fetchDetailsReducer = (state: StateMovieDetails, action: ActionMovieDetails): StateMovieDetails => {
+const fetchMovieDetailsReducer = (state: StateMovieDetails, action: ActionMovieDetails): StateMovieDetails => {
   switch (action.type) {
   case 'FETCH_SUCCESS':
     return {
@@ -20,4 +20,4 @@ const fetchDetailsReducer = (state: StateMovieDetails, action: ActionMovieDetail
     return state;
   }
 };
-export default fetchDetailsReducer;
+export default fetchMovieDetailsReducer;
