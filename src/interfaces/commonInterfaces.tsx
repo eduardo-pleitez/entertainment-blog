@@ -202,8 +202,8 @@ export type PropsResultData = {
 };
 
 export type PropsPagination = {
-  apiPagesLimit: number,
-  handlePagination: (selectedItem: { selected: number; }) => void,
+  apiPagesLimit: number;
+  handlePagination: (selectedItem: { selected: number; }) => void;
 }
 
 export type PropsDetailsData = {
@@ -300,3 +300,14 @@ export type PropsEpisodes = {
 export type PropsPersonDetailsData = {
   data: PersonFullDetails;
 };
+
+export type PropsSearch = {
+  handleFiltersChange: (e: { target: { id: string; value: React.SetStateAction<string>; selectedOptions: 
+HTMLCollectionOf<HTMLOptionElement>}; }) => void;
+}
+
+export type SearchListProps = {
+  url: string;
+  setUrl: React.Dispatch<React.SetStateAction<string>>;
+  textRef: React.MutableRefObject<string>;
+}

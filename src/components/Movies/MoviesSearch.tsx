@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import interceptorAxios from '../../services/axiosInstance';
-import { ResponseCertification, ResponseGenres, CertificationDetails, GenresDetails } from '../../interfaces/commonInterfaces';
+import { ResponseCertification, ResponseGenres, CertificationDetails, GenresDetails, PropsSearch } from '../../interfaces/commonInterfaces';
 import { BASE_URL } from '../../assets/globalVariables';
 
-type PropsMoviesSearch = {
-  handleFiltersChange: (e: { target: { id: string; value: React.SetStateAction<string>; selectedOptions: HTMLCollectionOf<HTMLOptionElement>}; }) => void;
-}
-export default function MoviesSearch({handleFiltersChange}:PropsMoviesSearch) {
+export default function MoviesSearch({handleFiltersChange}:PropsSearch) {
   const [certificationsData, setCertificationsData] = useState<[]>([]);
   const [genresData, setGenresData] = useState([]);
 

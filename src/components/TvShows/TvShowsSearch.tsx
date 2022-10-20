@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import interceptorAxios from '../../services/axiosInstance';
-import { ResponseGenres, GenresDetails } from '../../interfaces/commonInterfaces';
+import { ResponseGenres, GenresDetails, PropsSearch } from '../../interfaces/commonInterfaces';
 import { BASE_URL } from '../../assets/globalVariables';
 
-type PropsTvShowsSearch = {
-  handleFiltersChange: (e: { target: { id: string; value: React.SetStateAction<string>; selectedOptions: 
-HTMLCollectionOf<HTMLOptionElement>}; }) => void;
-}
-export default function TvShowsSearch({handleFiltersChange}:PropsTvShowsSearch) {
+export default function TvShowsSearch({handleFiltersChange}:PropsSearch) {
   const [genresData, setGenresData] = useState([]);
 
   useEffect(() => {
