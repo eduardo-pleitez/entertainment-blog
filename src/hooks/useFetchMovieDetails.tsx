@@ -7,7 +7,7 @@ import {
 } from '../interfaces/commonInterfaces';
 import interceptorAxios from '../services/axiosInstance';
 
-const useFetchDetails = (url: Url) => {
+const useFetchMovieDetails = (url: Url) => {
   const initialState: StateMovieDetails = {
     loading: true,
     error: '',
@@ -31,4 +31,4 @@ const useFetchDetails = (url: Url) => {
 
   return state;
 };
-export default useFetchDetails;
+export default useFetchMovieDetails;
