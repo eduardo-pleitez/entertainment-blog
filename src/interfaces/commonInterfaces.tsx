@@ -5,17 +5,17 @@ export type Data = {
 export type CertificationData = {
   certifications: {
     us: [];
-  }
-}
+  };
+};
 
 export type GenresData = {
   genres: [];
-}
+};
 
 export type DataSearch = {
   results: [];
   totalPages: number;
-}
+};
 
 export type State = {
   loading: boolean;
@@ -27,7 +27,7 @@ export type StateSearch = {
   loading: boolean;
   error: string;
   data: DataSearch;
-}
+};
 
 export type MovieFullDetails = {
   id: number;
@@ -67,7 +67,7 @@ export type PersonFullDetails = {
 
 export type SeasonsData = {
   seasons: [];
-}
+};
 
 export type CreditsData = {
   cast: [];
@@ -96,7 +96,7 @@ export type StateCreditsData = {
   loading: boolean;
   error: string;
   data: CreditsData;
-}
+};
 
 export type StateSeasonDetails = {
   loading: boolean;
@@ -184,12 +184,12 @@ export type ResponsePersonDetails = {
 
 export type CertificationDetails = {
   certification: string;
-}
+};
 
 export type GenresDetails = {
   id: number;
   name: string;
-}
+};
 
 export type Url = string;
 
@@ -198,13 +198,13 @@ export type PropsText = {
 };
 
 export type PropsResultData = {
-  data: Data
+  data: Data;
 };
 
 export type PropsPagination = {
   apiPagesLimit: number;
-  handlePagination: (selectedItem: { selected: number; }) => void;
-}
+  handlePagination: (selectedItem: { selected: number }) => void;
+};
 
 export type PropsDetailsData = {
   data: MovieFullDetails;
@@ -216,7 +216,7 @@ export type PropsTvShowDetailsData = {
 
 export type PropsCreditsData = {
   data: CreditsData;
-}
+};
 
 export type MovieShortDetails = {
   id: number;
@@ -242,49 +242,49 @@ export type TvShowShortDetails = {
 export type PropsGenres = {
   id: number;
   name: string;
-}
+};
 
 export type PropsCastData = {
   id: number;
   name: string;
   character: string;
   profilePath: string;
-}
+};
 
 export type PropsCrewData = {
   name: string;
   job: string;
-}
+};
 
 export type PropsReviewElement = {
   author: string;
   content: string;
   createdAt: string;
-}
+};
 
 export type PropsMovieSimilarElement = {
   id: number;
   posterPath: string;
   title: string;
-}
+};
 
 export type PropsTvShowSimilarElement = {
   id: number;
   posterPath: string;
   name: string;
-}
+};
 
 export type PropsTvShowSeasons = {
   data: SeasonsData;
   tvShowId: string;
-}
+};
 
 export type PropsTvShowSeasonElement = {
   id: number;
   posterPath: string;
   name: string;
   seasonNumber: number;
-}
+};
 
 export type PropsSeasonDetailsData = {
   data: SeasonFullDetails;
@@ -295,19 +295,24 @@ export type PropsEpisodes = {
   name: string;
   overview: string;
   stillPath: string;
-}
+};
 
 export type PropsPersonDetailsData = {
   data: PersonFullDetails;
 };
 
 export type PropsSearch = {
-  handleFiltersChange: (e: { target: { id: string; value: React.SetStateAction<string>; selectedOptions: 
-HTMLCollectionOf<HTMLOptionElement>}; }) => void;
-}
+  handleFiltersChange: (e: {
+    target: {
+      id: string;
+      value: React.SetStateAction<string>;
+      selectedOptions: HTMLCollectionOf<HTMLOptionElement>;
+    };
+  }) => void;
+};
 
 export type SearchListProps = {
   url: string;
   setUrl: React.Dispatch<React.SetStateAction<string>>;
   textRef: React.MutableRefObject<string>;
-}
+};

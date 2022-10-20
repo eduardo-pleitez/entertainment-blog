@@ -30,7 +30,10 @@ function SearchList({ url, setUrl, textRef }: SearchListProps) {
         {loading ? <LoadingMessage /> : <SearchResultElement data={data} />}
         {error ? <ErrorMessage>{error}</ErrorMessage> : null}
       </>
-      <Pagination apiPagesLimit={data.totalPages} handlePagination={handlePagination} />
+      <Pagination
+        apiPagesLimit={data.totalPages}
+        handlePagination={handlePagination}
+      />
     </div>
   );
 }

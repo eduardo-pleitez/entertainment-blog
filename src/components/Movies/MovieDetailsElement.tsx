@@ -1,5 +1,8 @@
 import React from 'react';
-import { PropsDetailsData, PropsGenres } from '../../interfaces/commonInterfaces';
+import {
+  PropsDetailsData,
+  PropsGenres,
+} from '../../interfaces/commonInterfaces';
 
 export default function MovieDetailsElement({ data }: PropsDetailsData) {
   return (
@@ -10,16 +13,27 @@ export default function MovieDetailsElement({ data }: PropsDetailsData) {
       <div className='md:w-3/4'>
         <h1 className='xl:text-3xl lg:text-2xl text-xl mb-4'>{data.title}</h1>
         <div>
-          {data.genres.map(({ id, name}: PropsGenres) => {
+          {data.genres.map(({ id, name }: PropsGenres) => {
             return (
-              <span key={id} className='inline-block m-1 p-2 bg-black text-white'>{name}</span>
+              <span
+                key={id}
+                className='inline-block m-1 p-2 bg-black text-white'
+              >
+                {name}
+              </span>
             );
           })}
         </div>
         <p className='text-lg mt-4'>Overview:</p>
         <p>{data.overview}</p>
-        <p><span className='text-lg'>Popularity:  </span>{data.popularity}</p> 
-        <p><span className='text-lg'>Release date:  </span>{data.releaseDate}</p>
+        <p>
+          <span className='text-lg'>Popularity: </span>
+          {data.popularity}
+        </p>
+        <p>
+          <span className='text-lg'>Release date: </span>
+          {data.releaseDate}
+        </p>
       </div>
     </div>
   );

@@ -16,7 +16,10 @@ function App() {
       <Route path='/' element={<Home />} />
       <Route path='/movie/:movieId' element={<MovieDetailsPage />} />
       <Route path='/tvshow/:tvShowId' element={<TvShowDetailsPage />} />
-      <Route path='/tvshow/:tvShowId/season/:seasonId' element={<SeasonDetailsPage />} />
+      <Route
+        path='/tvshow/:tvShowId/season/:seasonId'
+        element={<SeasonDetailsPage />}
+      />
       <Route path='/person/:personId' element={<PersonDetailsPage />} />
       <Route path='/search' element={<SearchPage />} />
     </Routes>
