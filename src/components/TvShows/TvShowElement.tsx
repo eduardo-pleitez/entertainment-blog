@@ -13,7 +13,7 @@ items-stretch justify-items-stretch sm:gap-x-2 lg:gap-y-4 gap-y-2'
     >
       {data.results.map(({ id, name, posterPath }: TvShowShortDetails) => {
         return (
-          <div key={id} className='border border-black bg-white'>
+          <div key={id} className='border border-black bg-white rounded-lg'>
             <Link to={'/tvshow/' + id}>
               <img
                 className='mx-auto sm:w-9/12'
