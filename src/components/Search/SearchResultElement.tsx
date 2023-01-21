@@ -19,8 +19,8 @@ export default function SearchResultElement({ data }: PropsResultData) {
         }: SearchResultDetails) => {
           if (mediaType == 'tv')
             return (
-              <div key={id} className='border border-black'>
-                <Link to={'/tvshow/' + id}>
+              <Link to={'/tvshow/' + id} key={id}>
+                <div>
                   <img
                     className='mx-auto sm:w-9/12'
                     src={`https://image.tmdb.org/t/p/w154/${posterPath}`}
@@ -28,14 +28,14 @@ export default function SearchResultElement({ data }: PropsResultData) {
                   <h3 className='text-center xl:text-xl lg:text-lg text-base'>
                     {name}
                   </h3>
-                </Link>
-              </div>
+                </div>
+              </Link>   
             );
 
           if (mediaType == 'movie')
             return (
-              <div key={id} className='border border-black'>
-                <Link to={'/movie/' + id}>
+              <Link to={'/movie/' + id} key={id}>
+                <div>
                   <img
                     className='mx-auto sm:w-9/12'
                     src={`https://image.tmdb.org/t/p/w154/${posterPath}`}
@@ -43,14 +43,14 @@ export default function SearchResultElement({ data }: PropsResultData) {
                   <h3 className='text-center xl:text-xl lg:text-lg text-base'>
                     {title}
                   </h3>
-                </Link>
-              </div>
+                </div>
+              </Link>
             );
 
           if (mediaType == 'person')
             return (
-              <div key={id} className='border border-black'>
-                <Link to={'/person/' + id}>
+              <Link to={'/person/' + id} key={id}>
+                <div>
                   <img
                     className='mx-auto sm:w-9/12'
                     src={`https://image.tmdb.org/t/p/w154/${profilePath}`}
@@ -58,8 +58,8 @@ export default function SearchResultElement({ data }: PropsResultData) {
                   <h3 className='text-center xl:text-xl lg:text-lg text-base'>
                     {name}
                   </h3>
-                </Link>
-              </div>
+                </div>
+              </Link>
             );
         }
       )}
