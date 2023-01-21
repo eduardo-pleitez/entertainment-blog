@@ -13,8 +13,8 @@ items-stretch justify-items-stretch sm:gap-x-2 lg:gap-y-4 gap-y-2'
     >
       {data.results.map(({ id, posterPath, title }: MovieShortDetails) => {
         return (
-          <div key={id} className='border border-black bg-white rounded-lg'>
-            <Link to={'/movie/' + id}>
+          <Link to={'/movie/' + id} key={id}>
+            <div>
               <img
                 className='mx-auto sm:w-9/12'
                 src={`https://image.tmdb.org/t/p/w154/${posterPath}`}
@@ -22,8 +22,8 @@ items-stretch justify-items-stretch sm:gap-x-2 lg:gap-y-4 gap-y-2'
               <h3 className='text-center xl:text-xl lg:text-lg text-base'>
                 {title}
               </h3>
-            </Link>
-          </div>
+            </div>
+          </Link>
         );
       })}
     </div>
